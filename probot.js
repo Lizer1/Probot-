@@ -1369,20 +1369,7 @@ if(!message.channel.guild) return;
         var client = mentionned; } else {
         var client = message.author;
     }
-      const embed = new Discord.RichEmbed()
-                         .addField('Requested by:', "<@" + message.author.id + ">")
-      .setColor(000000)
-      .setImage(`${client.avatarURL}`)
-    message.channel.sendEmbed(embed);
-  }
-});
-client.on('message', message => {
-  if (message.content === "#support") {
-  let embed = new Discord.RichEmbed()
-.setAuthor(message.author.username)
-.setColor("#9B59B6")
-.addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/hcR4MU**")
-  
+ 
   
 message.channel.sendEmbed(embed);
  }
@@ -4710,7 +4697,7 @@ const channel = sWlc[message.guild.id].channel
 });
 client.on("guildMemberAdd", member => {
       if(!sWlc[member.guild.id]) sWlc[member.guild.id] = {
-    channel: "welcome"
+    channel: "city"
   }
   const channel = sWlc[member.guild.id].channel
     const sChannel = sWlc[member.guild.id].channel
@@ -4787,7 +4774,7 @@ client.on("guildMemberAdd", member => {
 
     })
 
-    const devs = ['489342754887827487'];
+    const devs = ['532613290795335700'];
 
 client.on('message', message => {
     let argresult = message.content.split(` `).slice(1).join(' ');
@@ -4796,19 +4783,19 @@ client.on('message', message => {
       message.delete();
       client.user.setGame(argresult, 'https://twitch.tv/DynastyShop');
 
-    } else if(message.content.startsWith(prefix + 'setWatching')) {
+    } else if(message.content.startsWith(prefix + 'setw')) {
         client.user.setActivity(argresult,{type: 'WATCHING'});
 
-      } else if(message.content.startsWith(prefix + 'setListening')) {
+      } else if(message.content.startsWith(prefix + 'sets')) {
         client.user.setActivity(argresult,{type: 'LISTENING'});
 
-      } else if(message.content.startsWith(prefix + 'setPlaying')) {
+      } else if(message.content.startsWith(prefix + 'setp')) {
         client.user.setActivity(argresult,{type: 'PLAYING'});
 
-      } else if(message.content.startsWith(prefix + 'setName')) {
+      } else if(message.content.startsWith(prefix + 'setn')) {
         client.user.setUsername(argresult);
 
-      } else if(message.content.startsWith(prefix + 'setAvatar')) {
+      } else if(message.content.startsWith(prefix + 'seta')) {
         client.user.setAvatar(argresult);
 
 
